@@ -1,0 +1,41 @@
+Marketplace Technical Foundation - [General eCommerce]
+
+Technical Requirements :
+------ User-friendly interface for browsing products.
+------ Responsive design for mobile and desktop users.
+------ Essential pages: Home, Product Listing, Product Details, Cart, Checkout,
+       and Order Confirmation.
+
+------ Sanity CMS as Backend
+------ Third-Party APIs
+
+
+System Architecture :
+Front-End (Website) ------> Products Listing and details  Api called to show products ------> user adds products to the cart ------> 
+user create account or logins confirmation is done by the sanity Databse ------> 
+Order placed ------> Request sent to Sanity CMS thorugh Api ------> 
+Use of a Third-Party API to display Shipment Tracking Info ------> 
+Payment is processed through the Payment Gateway and confirmation recipet is sent to Sanity and a confirmation meesage sent to the user.
+
+API Requirements :
+
+Endpoint Name: Products
+---> Method: GET
+---> Description: Fetch all available products from Sanity.
+---> Response: Product details (ID, name, price, stock, image).
+
+
+Endpoint Name: Orders
+---> Method: POST
+---> Description: Create a new order in Sanity.
+---> Essentials: Customer info, product details, payment status.
+
+
+Endpoint Name: Shipment
+---> Method: GET
+---> Description: Track order status via third-party API.
+---> Response: Shipment ID, order ID, status, expected delivery date. 
+
+Technical Roadmap :
+Use the data od Day 1 and 2 to create a frontend and integrate using the backend using Sanity. USe of Api to perform and handle request and store data in the Database
+
